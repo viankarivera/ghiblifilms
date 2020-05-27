@@ -1,11 +1,16 @@
 #this keeps track of film attributes and saves all films created
 
 class Film
-    attr_accessor :name, :director
+#id => "idMovie" #this comes back with numbers though?
+#title => "title"
+#description => "??"
+#director => "?"
+#release date => "?"
+    attr_accessor :id, :title, :description, :director, :release_date
 
     @@all = []
 
-    def initialize(name, director)
+    def initialize
         #@name = name 
         #@director = director 
         @@all << self 
