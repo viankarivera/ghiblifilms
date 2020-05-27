@@ -12,15 +12,15 @@ class CLI
 
     def main_menu
         puts "Would you like to see a list of Studio Ghibli Films?"
-        puts "Type 'yes' to continue or any other key to exit"
+        puts "Type 'yes' to continue or 'x' to exit"
         user_input = gets.strip
-        if user_input == "yes" || user_input == "yes"
+        if user_input == "yes"
             puts "Great!"
             list_of_films
-            ask_user_for_film_choice 
+            #ask_user_for_film_choice ?
         else 
             puts "Sayonara(goodbye)!"
-            binding.pry
+            #binding.pry
         end 
     end 
 
@@ -34,10 +34,10 @@ class CLI
 
     def list_of_films
         Film.all.each.with_index(1) do |film, index|
-            puts "#{index}. #{film.name}"
+            puts "#{index}. #{film.title}"
         end 
     end 
-        #need to access all movies and print them out
+    
 
     #list film titles?
 

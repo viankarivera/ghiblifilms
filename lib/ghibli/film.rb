@@ -6,7 +6,7 @@ class Film
 #description => "??"
 #director => "?"
 #release date => "?"
-    attr_accessor :id, :title, :description, :director, :release_date
+    attr_accessor :title, :description, :director, :release_date
 
     @@all = []
 

@@ -13,11 +13,11 @@ class API
 
         array_of_films.each do |film_hash|
             film_instance = Film.new
-            film_instance.title = title
-            film_instance.description = description
-            film_instance.release_date = date
-            film_instance.director = director
-        binding.pry
+            film_instance.title = film_hash["title"]
+            film_instance.description = film_hash["description"]
+            film_instance.release_date = film_hash["release_date"]
+            film_instance.director = film_hash["director"]
+        #binding.pry
         end 
 
     end
