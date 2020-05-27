@@ -6,26 +6,21 @@ class API
     uri = URI(url)
     response = Net::HTTP.get(uri)
     array_of_films = JSON.parse(response)
+    #binding.pry
     
-
-    array_of_films.each do |film_hash|
-        film_instance = Film.new
-
-        #binding.pry
-        film_instance.id =
-        film_instance.title = 
-        film_instance.description = 
-        film_instance.release_date = 
-        film_instance.director =
-
-
-    
-    
-    
-    #turns it into a ruby hash
-    end
     #initialize a new movie
     #assign attributes to it
+
+        array_of_films.each do |film_hash|
+            film_instance = Film.new
+            film_instance.title = title
+            film_instance.description = description
+            film_instance.release_date = date
+            film_instance.director = director
+        binding.pry
+        end 
+
+    end
 #class where URL will be accessed
 #fetch fillms or movies in  a class method
 end 
