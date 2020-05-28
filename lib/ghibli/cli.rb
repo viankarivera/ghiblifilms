@@ -11,13 +11,15 @@ class CLI
     end
 
     def main_menu
-        puts "Would you like to see a list of Studio Ghibli Films?"
+        puts "\nWould you like to see a list of Studio Ghibli Films?"
         puts "Type 'yes' to continue or 'x' to exit"
         user_input = gets.strip
         if user_input == "yes"
-            puts "Great!"
+            puts "\nGreat!"
             list_of_films
             ask_user_for_film_choice
+            sleep(1)
+            main_menu
         else 
             puts "Sayonara(goodbye)!"
             #binding.pry
@@ -35,10 +37,10 @@ class CLI
         #find the movie based on index number
         #display the movie in a method passing find movie object
             choice = Film.all[index]
-            puts choice.title
-            puts choice.release_date
-            puts choice.director
-            puts choice.description
+            puts "\nTitle: " + choice.title
+            puts "\nRelease Date: " + choice.release_date
+            puts "\nDirector: " + choice.director
+            puts "\nDescription: " + choice.description
             #binding.pry
     end 
 
@@ -53,7 +55,7 @@ class CLI
      #   Film.all[index]
     
 
-    #list film titles?
+
 
 
 end
