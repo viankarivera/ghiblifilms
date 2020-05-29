@@ -21,7 +21,7 @@ class CLI
             sleep(1)
             main_menu
         else 
-            puts "Sayonara(goodbye)!"
+            puts "\nSayonara(goodbye)!"
             #binding.pry
         end 
     end 
